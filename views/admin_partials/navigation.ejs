@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" href="<% options.path %>">Admin</a>
+  <ul class="nav navbar-nav">
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="/models" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Models</a>
+      <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+        <% for(var i=0; i<options.models.length; i++) { %>
+            <a class="dropdown-item" href="/models/<%= options.models[i] %>">
+              <%= options.models[i] %>
+            </a>
+        <% } %>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/settings">Settings</a>
+    </li>
+
+  </ul>
+</nav>
